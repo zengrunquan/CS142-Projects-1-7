@@ -1,0 +1,18 @@
+# 依赖可以根据 package.json 和锁文件重新安装
+node_modules/
+
+# 构建产物可以从源码重新生成
+compiled/
+dist/
+build/
+coverage/
+
+# 避免提交本地环境配置及运行日志
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+
+# 上传功能产生的本地图片不属于课程初始资源
+/project7/images/U[0-9]*.*

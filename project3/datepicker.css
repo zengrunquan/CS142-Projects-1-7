@@ -1,0 +1,188 @@
+/* 页面整体布局 */
+body {
+  margin: 0;
+  padding: 40px 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;           /* 使用 flex 布局 */
+  flex-direction: column;  /* 子元素垂直排列 */
+  align-items: center;     /* 子元素水平居中对齐 */
+  background-color: #f8fafc;
+  font-family: 'Arial', sans-serif;
+}
+
+/* 标题样式 */
+h1 {
+  color: #1e293b;
+  margin: 20px 0 15px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* 日期选择器容器 */
+.date-picker {
+  border-radius: 10px;  /* 圆角边框 */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  width: 280px;
+  background-color: #ffffff;
+  overflow: hidden;  /* 超出容器部分隐藏 */
+  transition: all 0.3s ease;
+  margin-bottom: 35px;  /* 底部外边距 防止多个日历出现拥挤*/
+}
+
+.date-picker:hover {
+  /* 增加日历悬停效果 */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 头部样式 */
+.date-picker .header {
+  background: linear-gradient(135deg, #4a6cf7 0%, #3b5bdb 100%);
+  color: white;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;  /* 元素水平分布 */
+  align-items: center;
+  position: relative;  /* 定位上下文：让内部元素可以用z-index控制层级 */
+  z-index: 1;  /* 层级为1,确保头部在日历日期的上方 */
+}
+
+/* 头部的年月标题显示 */
+.date-picker .header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* 导航按钮 */
+.date-picker .header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 50%;  /* 圆角 */
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 导航按钮悬停效果 */
+.date-picker .header button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.1);  /* 按钮放大1.1倍 */
+}
+
+/* 导航按钮点击时效果 */
+.date-picker .header button:active {
+  transform: scale(0.95);  /* 点击时缩小至0.95倍 */
+}
+
+/* 导航按钮聚焦效果 */
+.date-picker .header button:focus {
+  outline: none;  /* 取消按钮被点击后默认的蓝色边框 */
+}
+
+/* 星期标题行 */
+.date-picker .weekdays {
+  display: grid;  /* 使用 grid 布局，方便平均分配 7 列 */
+  grid-template-columns: repeat(7, 1fr);  /* 7列 每列宽度相等（1fr=剩余空间的1份） */
+  background-color: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.date-picker .weekdays div {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* 日期单元格（包含所有日期单元格） */
+.date-picker .days {
+  display: grid;  /* 同样使用 grid 布局，平均分配 */
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  padding: 6px;
+  background-color: #f8fafc;
+}
+
+/* 单个日期单元格基础样式 */
+.date-picker .days .day {
+  aspect-ratio: 1;  /* 宽高比1:1 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 1px;
+  transition: all 0.2s ease;
+}
+
+/* 非当前月日期 */
+.date-picker .days .other-month {
+  color: #5b8ed2;
+  cursor: default;  /* 鼠标悬停不显示手型 */
+  opacity: 0.7;     /* 增强透明度，弱化显示，区别当前月日期 */
+}
+
+/* 当前月日期 */
+.date-picker .days .current-month {
+  color: #334155;
+}
+
+/* 当前月日期（包括 非选中 非今天 今天）的悬停效果 */
+.date-picker .days .current-month:hover {
+  background-color: #e2e8f0;
+  transform: scale(1.05);  /* 放大1.05倍 */
+}
+
+/* 今天的日期（特殊标注） */
+.date-picker .days .today {
+  background-color: #e0f2fe;
+  border: 2px solid #0284c7;
+  font-weight: 600;
+  color: #0369a1;
+  position: relative;
+}
+
+/* .date-picker .days .today:hover {
+  transform: scale(1.05);
+} */
+
+/* 选中日期 （用户点击的日期） */
+.date-picker .days .selected {
+  background: linear-gradient(135deg, #4a6cf7 0%, #3b5bdb 100%);  /* 背景：与头部一 致的渐变色，强化选中状态 */
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(59, 91, 219, 0.25);
+}
+
+/* 响应式设计（适应屏幕） */
+@media (max-width: 400px) {
+  .date-picker {
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  h1 {
+    font-size: 20px;
+  }
+  
+  .date-picker .days .day {
+    font-size: 13px;
+  }
+  
+  .date-picker .header h2 {
+    font-size: 16px;
+  }
+  
+  .date-picker .weekdays div {
+    font-size: 13px;
+  }
+}    

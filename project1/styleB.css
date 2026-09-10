@@ -1,0 +1,40 @@
+body {
+    min-height: 100vh;  /* 确保最小高度为视口高度 */
+    position: relative; /* 为固定定位提供参考 */
+    overflow-x: auto;   /* 防止水平溢出导致布局问题 */
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 40px;
+}
+
+/* 主容器 -- 水平排列A-E */
+.container {
+  display: flex;
+  height: 100%;           /* 撑满导航栏高度 */
+  white-space: nowrap;    /* 文字不换行 */
+}
+
+/* 通用盒子样式 */
+.box {
+    width: 100px;
+    height: 150px;
+    background-color: #eeeff2;         /* 背景颜色 */
+    border-left: 10px dotted #D0D0FF;  /* 左侧浅紫色点状虚线 */
+    padding: 10px;                       /* 文字与边缘间距 */
+    flex-shrink: 0;                      /* 防止盒子被压缩 */
+    margin-right: 10px;                  /* 盒子之间10像素间距 */
+}
+
+/* 悬停效果 */
+.box:hover {
+    background-color: yellow;  /* 悬停时背景黄色 */
+    color: goldenrod;          /* 悬停时文字金色 */
+    cursor: pointer;             /* 手形光标 */
+}
+
+/* 最后一个盒子特殊样式 */
+.box:last-child {
+    position: fixed;  /* 固定定位 */
+    right: 0;         /* 与右边距还是有距离 */
+    bottom: 0;
+    margin-right: 0; /* 移除右边距 */
+}

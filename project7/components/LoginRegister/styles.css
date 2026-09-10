@@ -1,0 +1,56 @@
+/* Please write */
+.login-register-container {
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.login-register-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.form-section {
+  padding: 2rem;
+}
+
+.form-title {
+  margin-bottom: 1.5rem !important;
+  text-align: center;
+}
+
+.form-field {
+  margin-bottom: 1rem !important;
+}
+
+.form-actions {
+  margin-top: 2rem !important;
+}
+
+.error-message {
+  padding: 0.5rem;
+  border-radius: 4px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.success-message {
+  padding: 0.5rem;
+  border-radius: 4px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .login-register-container {
+    padding: 1rem;
+  }
+  
+  .form-section {
+    padding: 1.5rem 1rem;
+  }
+}

@@ -1,0 +1,70 @@
+.cs142-topbar-appBar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #2196f3;
+}
+
+.topbar-content {
+  display: flex;
+  align-items: center;
+  padding: 0 20px; /* 左右内边距，避免贴边 */
+  width: 100%;
+}
+
+.user-greeting {
+  font-weight: 500;
+  margin-right: 1.5rem;
+}
+
+.logout-button {
+  margin-right: 1rem !important;
+  color: white !important;
+}
+
+.advanced-switch {
+  margin: 0 1.5rem !important;
+}
+
+.version-info {
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 0.875rem;
+}
+
+.error-info {
+  color: #ffcdd2;
+  font-size: 0.875rem;
+}
+
+.add-photo-button {
+  margin-right: 1rem !important;
+  background-color: #4caf50 !important;
+  color: white !important;
+}
+
+.add-photo-button:hover {
+  background-color: #388e3c !important;
+}
+
+/* 响应式调整 */
+@media (max-width: 900px) {
+  .version-info {
+    display: none;
+  }
+  
+  .advanced-switch .MuiFormControlLabel-label {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .cs142-topbar-appBar {
+    padding: 0 1rem;
+  }
+  
+  .user-greeting {
+    font-size: 1rem !important;
+  }
+}

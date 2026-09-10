@@ -1,0 +1,77 @@
+/* Please write */
+.user-photos-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.photo-navigation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.photo-display {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.photo-image {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.comment-item {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.comment-form {
+  margin-top: 1.5rem;
+}
+
+.comment-input {
+  margin-bottom: 1rem !important;
+}
+
+.nav-button {
+  transition: transform 0.2s ease;
+}
+
+.nav-button:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .user-photos-container {
+    padding: 1rem;
+  }
+  
+  .comments-section {
+    max-height: 300px;
+  }
+}

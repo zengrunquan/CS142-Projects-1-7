@@ -1,0 +1,48 @@
+/* Please write */
+.user-detail-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.user-detail-card {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.user-header {
+  margin-bottom: 1.5rem;
+}
+
+.user-info-section {
+  line-height: 1.8;
+}
+
+.user-info-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.view-photos-button {
+  margin-top: 1.5rem !important;
+  width: 100%;
+}
+
+.advanced-feature-hint {
+  margin-top: 1rem !important;
+  font-style: italic;
+  color: #666;
+}
+
+/* 响应式调整 */
+@media (max-width: 600px) {
+  .user-detail-container {
+    padding: 1rem;
+  }
+  
+  .user-info-section {
+    padding: 0 0.5rem;
+  }
+}

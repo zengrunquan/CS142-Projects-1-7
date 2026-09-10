@@ -1,0 +1,32 @@
+/**
+ * CSS for the CS142 Project 4, Problem 2 States component.
+ * 
+ * Since CSS uses a global name space for classes we should use names starting
+ * with "cs142-states-" here.
+ */
+.cs142-states-container {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+.cs142-states-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.cs142-states-list {
+    list-style-type: none;  /* 移除列表项前面默认的标记符号（如无序前面的圆点和有序前面的数字） */
+    padding: 0;
+}
+
+.cs142-states-list li {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.cs142-states-list li:last-child {
+    border-bottom: none;
+}

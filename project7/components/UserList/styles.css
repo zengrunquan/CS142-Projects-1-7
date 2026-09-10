@@ -1,0 +1,43 @@
+/* Please write */
+.user-list-container {
+  padding: 1rem;
+  height: calc(100vh - 60px); /* 减去顶部导航栏高度 */
+  overflow-y: auto;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+}
+
+.user-list-item {
+  transition: background-color 0.2s ease;
+}
+
+.user-list-item:hover {
+  background-color: #e0f2f1;
+}
+
+.user-name {
+  font-weight: 500 !important;
+}
+
+.counter-chips {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* 滚动条美化 */
+.user-list-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.user-list-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.user-list-container::-webkit-scrollbar-thumb {
+  background: #bbbbbb;
+  border-radius: 3px;
+}
+
+.user-list-container::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}

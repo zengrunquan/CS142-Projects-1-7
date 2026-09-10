@@ -1,0 +1,31 @@
+/* 整个头部容器 */
+.cs142-header {
+    background-color: #068ed2;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 头部内容区域 */
+.cs142-header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* 标题样式 */
+.cs142-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+.cs142-header h3 {
+  margin: 0;
+  font-size: 0.5rem;
+  font-weight: normal;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
