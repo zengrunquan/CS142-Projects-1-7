@@ -133,3 +133,9 @@ Project 2–7 均提供 `npm run lint`。其中 Project 4–7 的 lint 脚本包
 - `images/` 中的课程初始图片及测试资源保留在仓库中；Project 7 上传生成的 `U时间戳` 图片由 `.gitignore` 忽略。
 - MongoDB 数据不会随源码一同提交，可通过各项目的 `loadDatabase.js` 初始化示例数据。
 - 本仓库用于个人课程学习与实践，并非斯坦福大学官方仓库。课程提供的代码和资源保留原有声明。
+
+## 许可证
+
+本仓库中由 zengrunquan 创作的原创代码及修改采用 [ISC License](./LICENSE)，版权署名为 Copyright (c) 2026 zengrunquan。
+
+课程提供的代码、图片及其他第三方资源保留其原有版权和授权声明，不因根目录的许可证而改变授权范围。上述 ISC 授权仅适用于本人有权授权的部分。
